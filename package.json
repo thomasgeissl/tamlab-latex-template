@@ -1,0 +1,18 @@
+{
+  "name": "thesis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "pdflatex thesis.tex && bibtex thesis && pdflatex thesis.tex && pdflatex thesis.tex",
+    "build-html": "pandoc -s thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=styles.css -o html/thesis.html",
+    "serve-html": "npx http-serve ./html",
+    "dev": "npx nodemon --ext tex --exec \"npm run build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

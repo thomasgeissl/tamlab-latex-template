@@ -1,0 +1,52 @@
+name: Install LaTeX Dependencies and Build
+
+on: 
+  push:
+    branches:
+      - main  # Change this to your desired branch
+  pull_request:
+  release:
+    types: [created]  # Trigger on release creation
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install LaTeX
+        run: sudo apt update && sudo apt install -y texlive texlive-latex-extra
+
+      - name: Install NPM Dependencies
+        run: npm install   # Ensure all dependencies are installed
+
+      - name: Build Project and Generate PDF
+        run: npm run build  # This should generate the PDF
+
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')  # Only run on tag push
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}  # The tag being released
+          release_name: Release ${{ github.ref }}  # Name of the release
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload PDF to Release
+        if: steps.create_release.outputs.upload_url != ''  # Only run if the release was created
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: thesis.pdf  # Path to your generated PDF
+          asset_name: thesis_${{ github.ref }}.pdf  # Rename the uploaded asset to thesis_version.pdf
+          asset_content_type: application/pdf
