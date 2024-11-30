@@ -1,4 +1,4 @@
-# tamlab-master-template
+# tamlab-latex-template
 
 ## installation
 * use this repo as a template
@@ -8,8 +8,12 @@
 * you will need an editor/ide, vs code is recommended
 * nodejs
   * osx with brew: `brew install node`
-  * linux with snap: ``
-* pdflatex 
+  * windows: TODO
+  * linux with snap: `sudo snap refresh node --channel=16/stable`
+* pdflatex via texlive, basictex
+    * osx with brew: `brew install --cask basictex`
+    * windows: TODO
+    * linus: TODO
 * [optional] pandoc - in case you wanna render to html instead of pdf
   * osx with brew: `brew install pandoc`
 
