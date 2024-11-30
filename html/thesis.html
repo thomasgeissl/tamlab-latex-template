@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Thomas Geissl" />
-  <meta name="dcterms.date" content="2024-11-29" />
-  <title>Turntangilism</title>
+  <meta name="author" content="demo author name" />
+  <meta name="dcterms.date" content="2024-11-30" />
+  <title>this is the title</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -23,14 +23,34 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Turntangilism</h1>
-<p class="author">Thomas Geissl</p>
-<p class="date">2024-11-29</p>
+<h1 class="title">this is the title</h1>
+<p class="author">demo author name</p>
+<p class="date">2024-11-30</p>
 <div class="abstract">
 <div class="abstract-title">Abstract</div>
 <p>TODO</p>
@@ -38,11 +58,88 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#appendix" id="toc-appendix"><span
-class="toc-section-number">1</span> Appendix</a></li>
+<li><a href="#changelog" id="toc-changelog"><span
+class="toc-section-number">1</span> Changelog</a></li>
+<li><a href="#demo-chapter" id="toc-demo-chapter"><span
+class="toc-section-number">2</span> Demo Chapter</a>
+<ul>
+<li><a href="#latex-diagram-demo" id="toc-latex-diagram-demo">LaTeX
+Diagram Demo</a></li>
+<li><a href="#latex-math-equation-demo"
+id="toc-latex-math-equation-demo">LaTeX Math Equation Demo</a>
+<ul>
+<li><a href="#inline-math" id="toc-inline-math">Inline Math</a></li>
+<li><a href="#displayed-equations"
+id="toc-displayed-equations">Displayed Equations</a></li>
+<li><a href="#aligned-equations" id="toc-aligned-equations">Aligned
+Equations</a></li>
+<li><a href="#matrices" id="toc-matrices">Matrices</a></li>
+<li><a href="#summations-and-integrals"
+id="toc-summations-and-integrals">Summations and Integrals</a></li>
+<li><a href="#greek-letters-and-symbols"
+id="toc-greek-letters-and-symbols">Greek Letters and Symbols</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#appendix" id="toc-appendix">Appendix</a></li>
 </ul>
 </nav>
-<h1 data-number="1" id="appendix"><span
-class="header-section-number">1</span> Appendix</h1>
+<h1 data-number="1" id="changelog"><span
+class="header-section-number">1</span> Changelog</h1>
+<h1 data-number="2" id="demo-chapter"><span
+class="header-section-number">2</span> Demo Chapter</h1>
+<p>this is just a demo ref, but it is cool: <span class="citation"
+data-cites="kaltenbrunner2018tquencer">(Kaltenbrunner and Vetter
+2018)</span></p>
+<h2 class="unnumbered" id="latex-diagram-demo">LaTeX Diagram Demo</h2>
+<p>Here is an example of a simple diagram drawn using TikZ:</p>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="latex-math-equation-demo">LaTeX Math Equation
+Demo</h2>
+<p>Here are some examples of math equations in LaTeX:</p>
+<h3 class="unnumbered" id="inline-math">Inline Math</h3>
+<p>The quadratic formula is written as <span class="math inline">$x =
+\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$</span>.</p>
+<h3 class="unnumbered" id="displayed-equations">Displayed Equations</h3>
+<p>The same formula in a displayed equation: <span
+class="math display">$$x = \frac{-b \pm \sqrt{b^2 -
+4ac}}{2a}$$</span></p>
+<h3 class="unnumbered" id="aligned-equations">Aligned Equations</h3>
+<p>Solving a system of linear equations: <span
+class="math display">$$\begin{aligned}
+2x + 3y &amp;= 5 \\
+4x -  y &amp;= 7
+\end{aligned}$$</span></p>
+<h3 class="unnumbered" id="matrices">Matrices</h3>
+<p>A 3x3 identity matrix: <span class="math display">$$I_3 =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}$$</span></p>
+<h3 class="unnumbered" id="summations-and-integrals">Summations and
+Integrals</h3>
+<p>A summation example: <span class="math display">$$S =
+\sum_{n=1}^\infty \frac{1}{n^2}$$</span></p>
+<p>An integral example: <span class="math display">$$\int_a^b x^2 \, dx
+= \frac{b^3}{3} - \frac{a^3}{3}$$</span></p>
+<h3 class="unnumbered" id="greek-letters-and-symbols">Greek Letters and
+Symbols</h3>
+<p>Using Greek letters and mathematical symbols: <span
+class="math display">$$\alpha + \beta = \gamma, \quad \nabla \cdot
+\mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial
+F_y}{\partial y} + \frac{\partial F_z}{\partial z}$$</span></p>
+<h1 class="unnumbered" id="appendix">Appendix</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-kaltenbrunner2018tquencer" class="csl-entry"
+role="listitem">
+Kaltenbrunner, Martin, and Jens Vetter. 2018. <span>“Tquencer: A
+Tangible Musical Sequencer Using Overlays.”</span> In <em>Proceedings of
+the Twelfth International Conference on Tangible, Embedded, and Embodied
+Interaction</em>, 429–34.
+</div>
+</div>
 </body>
 </html>
