@@ -24,6 +24,7 @@ It can render the documents to pdf using pdflatex and/or as a stylable html file
 * build a pdf: `npm run build`
 * build a html file: `npm run build-html`
 * serve directory: `npm run serve-html`
+* build an epub: `npm run build-epub`
 * you might wanna add your references to the scripts/download_references.sh file, so you make it easier for others to fetch them
 
 ## contributing
