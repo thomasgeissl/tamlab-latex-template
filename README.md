@@ -7,7 +7,7 @@ It can render the documents to pdf using pdflatex and/or as a stylable html file
 * you will need an editor/ide, vs code is recommended
 * nodejs
   * osx with brew: `brew install node`
-  * windows: TODO
+  * windows with winget: `winget install -e --id OpenJS.NodeJS`
   * linux with snap: `sudo snap refresh node --channel=16/stable`
 * pdflatex via texlive, basictex or any other latex suite that includes pdflatex
     * osx with brew: `brew install --cask basictex`
@@ -30,7 +30,7 @@ It can render the documents to pdf using pdflatex and/or as a stylable html file
 ## current state
 * latex pdf rendering should be fine
 * html and epub output has not been tested much, not really the priority for now, i am assuming that not everything renders correctly, depending on what latex packages being used
-* ci actions also might still need some tweaking, e.g. uploading a pdf to the releases on gtihub when pushing a git tag
+* ci actions also might still need some tweaking, e.g. uploading a pdf to the releases on github when pushing a git tag
 
 ## contributing
 * feel free to fork and send PRs
