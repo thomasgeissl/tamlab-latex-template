@@ -27,6 +27,11 @@ It can render the documents to pdf using pdflatex and/or as a stylable html file
 * build an epub: `npm run build-epub`
 * you might wanna add your references to the scripts/download_references.sh file, so you make it easier for others to fetch them
 
+## current state
+* latex pdf rendering should be fine
+* html and epub output has not been tested much, not really the priority for now, i am assuming that not everything renders correctly, depending on what latex packages being used
+* ci actions also might still need some tweaking, e.g. uploading a pdf to the releases on gtihub when pushing a git tag
+
 ## contributing
 * feel free to fork and send PRs
 * or file an issue via the github issue tracker
