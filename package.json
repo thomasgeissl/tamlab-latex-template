@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "pdflatex thesis.tex && bibtex thesis && pdflatex thesis.tex && pdflatex thesis.tex",
+    "build": "lualatex thesis.tex && bibtex thesis && lualatex thesis.tex && lualatex thesis.tex",
     "build-html": "pandoc -s thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=styles.css -o html/thesis.html",
     "build-epub": "pandoc -s thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=html/styles.css -o epub/thesis.epub",
     "serve-html": "npx http-serve ./html",

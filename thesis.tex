@@ -5,7 +5,24 @@
 \usepackage{amsmath, amssymb}
 \usepackage{hyperref}
 \usepackage{longtable}
+% \usepackage{musixtex}
 \usepackage{tikz} % For drawing diagrams
+
+\usepackage{ifluatex}
+\ifluatex
+  \usepackage{fontspec}
+    \setmainfont{Barlow}[
+    Path=assets/fonts/Barlow/,
+    Extension=.ttf,
+    UprightFont=*-Regular
+    ]
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{times}
+\fi
+
+
 
 \setcounter{tocdepth}{4}
 \setlength{\parindent}{0pt} % Remove paragraph indentation
