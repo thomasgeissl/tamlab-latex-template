@@ -1,6 +1,6 @@
 # tamlab-latex-template
 This repository provides a basic setup for writing LaTeX documents locally on your machine and building them using GitHub CI.
-It can render the documents to pdf using pdflatex and/or as a stylable html file using pandoc. It is setup as an npm package to make it easier to run tasks and install dependencies.
+It can render the documents to pdf using lualatex and/or as a stylable html file using pandoc. It is setup as an npm package to make it easier to run tasks and install dependencies.
 
 
 ## requirements
@@ -9,10 +9,10 @@ It can render the documents to pdf using pdflatex and/or as a stylable html file
   * osx with brew: `brew install node`
   * windows with winget: `winget install -e --id OpenJS.NodeJS`
   * linux with snap: `sudo snap refresh node --channel=16/stable`
-* pdflatex via texlive, basictex or any other latex suite that includes pdflatex
+* lualatex via texlive, basictex or any other latex suite that includes lualatex
     * osx with brew: `brew install --cask basictex`
     * windows: TODO
-    * linus: TODO
+    * linux: TODO
 * [optional] pandoc - in case you wanna render to html instead of pdf
   * osx with brew: `brew install pandoc`
 
