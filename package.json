@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "lualatex thesis.tex && bibtex thesis && lualatex thesis.tex && lualatex thesis.tex",
-    "build-html": "pandoc -s thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=styles.css -o html/thesis.html",
-    "build-epub": "pandoc -s thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=html/styles.css -o epub/thesis.epub",
+    "build": "lualatex template/thesis.tex && bibtex template/thesis && lualatex template/thesis.tex && lualatex template/thesis.tex",
+    "build-html": "pandoc -s template/thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=styles.css -o html/thesis.html",
+    "build-epub": "pandoc -s template/thesis.tex --number-sections --table-of-contents --toc-depth=4 --bibliography=references.bib --citeproc --css=html/styles.css -o epub/thesis.epub",
     "serve-html": "npx http-serve ./html",
     "dev": "npx nodemon --ext tex --exec \"npm run build\""
   },
